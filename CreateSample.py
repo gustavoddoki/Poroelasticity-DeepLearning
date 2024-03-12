@@ -1,3 +1,7 @@
+import numpy as np
+import random
+
+
 def calculate_source_terms(L, E, K, x, t, A, B, m, n, w, z):
     U = (E * A * np.pi * np.exp(-t * m + n) + B * np.exp(-t * w + z)) * np.cos(np.pi * x / (2 * L)) * np.pi
     P = (K * B * np.pi * np.exp(-t * w + z) + A * m * np.exp(-t * m + n)) * np.sin(np.pi * x / (2 * L)) * np.pi
